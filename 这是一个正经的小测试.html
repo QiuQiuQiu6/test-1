@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta rel="stylesheet" type="text/css" href="mystle.css">
+        <title>小测试</title>
+    </head>
+    <style>
+        /*大体边框*/
+        body{
+            background-color: rgb(235, 178, 209);
+            margin: 0 auto;
+            width: 500px;
+        }
+        p.one{
+            width: 530px;
+            height: 150px;
+            border-style: solid;
+            background-color: rgb(244, 233, 241);
+            border-color: rgb(52, 50, 52);
+            /*padding-top: 15px;
+            padding-bottom: -5px;*/
+        }
+        p.two{
+            opacity: 0.5;
+            position:absolute;
+            left: 33.33%;
+            width: 500px;
+            height: 150px;
+            border-style: solid;
+            background-color:rgb(251, 225, 245);
+            border-color: rgb(52, 50, 52);
+            z-index:-1;
+        }
+        .space{
+            margin-top: -30%;
+        }
+        /*字体*/
+        h1{
+            font-size: 35px; 
+            text-align:center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        /*随机按钮*/
+        #randomButton{
+            position:absolute;
+            /*top:50%;*/
+            left:53%;
+            /*transform: teanslate(-50%,-50%);*/
+        }
+    </style>
+    <body>
+        <img src="file:///Users/qishiqi/Desktop/%E7%BC%96%E7%A8%8B/%E7%8E%A9%E7%8E%A9%E7%9A%84%E4%BA%86/url/output-onlinegiftools.gif" height="400px" width="400px" alt="a gif">
+        <h1>
+            <p class="two">
+                <p class="one">   
+                   <div class="space"> Wendy is smarter than you</div>
+                </p>
+            </p>
+        </h1>
+        <button type="button" onclick="alert('You are correct!')">OF COURSE!</button>
+        <button id="randomButton" onmouseover="moveButton()">NO, I'M SMARTER!!!</button>
+
+    <script>
+        function moveButton(){
+            var button = document.getElementById('randomButton');
+            var maxY = window.innerHeight - button.offsetHeight;
+            var maxX = window. innerWidth - button.offsetWidth;
+
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        }
+    </script>
+    </body>
+</html>
